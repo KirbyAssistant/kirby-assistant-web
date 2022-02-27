@@ -1,0 +1,44 @@
+{
+  "name": "kirby-assistant-web",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "vue-tsc --noEmit && vite build",
+    "dev": "vite --host",
+    "i18n:report": "vue-cli-service i18n:report --src \"./src/**/*.?(js|vue)\" --locales \"./src/locales/**/*.json\"",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@types/node": "^17.0.21",
+    "naive-ui": "^2.25.3",
+    "qs": "^6.10.3",
+    "vfonts": "^0.0.3",
+    "vue": "^3.2.25",
+    "vue-clipboard3": "^1.0.1",
+    "vue-i18n": "9",
+    "vue-router": "^4.0.12"
+  },
+  "devDependencies": {
+    "@intlify/vue-i18n-loader": "^3.0.0",
+    "@rollup/plugin-inject": "^4.0.4",
+    "@types/jsonp": "^0.2.1",
+    "@types/qs": "^6.9.7",
+    "@typescript-eslint/eslint-plugin": "^5.12.1",
+    "@typescript-eslint/parser": "^5.12.1",
+    "@vitejs/plugin-vue": "^2.2.0",
+    "@vue/cli-shared-utils": "^5.0.1",
+    "axios": "^0.26.0",
+    "eslint": "^8.9.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.5.0",
+    "jsonp": "^0.2.1",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.4",
+    "vite": "^2.8.0",
+    "vue-cli-plugin-i18n": "~2.3.1",
+    "vue-tsc": "^0.29.8"
+  },
+  "packageManager": "yarn@1.22.17"
+}

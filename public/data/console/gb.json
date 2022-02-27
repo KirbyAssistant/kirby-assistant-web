@@ -1,0 +1,47 @@
+[
+  {
+    "title": "星之卡比 1",
+    "image": "https://api.imyan.ren/ka/image/game/xing1.jpg",
+    "download_link": {
+      "jp": "https://eyun.baidu.com/s/3pKN6dIz",
+      "us": "https://eyun.baidu.com/s/3miPUVES"
+    },
+    "tag": "gb_x1"
+  },
+  {
+    "title": "星之卡比 2",
+    "image": "https://api.imyan.ren/ka/image/game/xing2.jpg",
+    "download_link": {
+      "jp": "https://eyun.baidu.com/s/3i57Kjjv",
+      "us": "https://eyun.baidu.com/s/3jI4urlW"
+    },
+    "tag": "gb_x2"
+  },
+  {
+    "title": "星之卡比 卡比宝石星",
+    "image": "https://api.imyan.ren/ka/image/game/baoshixing.jpg",
+    "download_link": {
+      "jp": "https://eyun.baidu.com/s/3miFgbtI",
+      "us": "https://eyun.baidu.com/s/3nvtzunn"
+    },
+    "tag": "gb_bsx"
+  },
+  {
+    "title": "星之卡比 卡比打砖块",
+    "image": "https://api.imyan.ren/ka/image/game/dazhuankuai.jpg",
+    "download_link": {
+      "jp": "https://eyun.baidu.com/s/3i5Dkqah",
+      "us": "https://eyun.baidu.com/s/3ge7808r"
+    },
+    "tag": "gb_dzk"
+  },
+  {
+    "title": "星之卡比 卡比弹珠台",
+    "image": "https://api.imyan.ren/ka/image/game/danzhutai.jpg",
+    "download_link": {
+      "jp": "https://eyun.baidu.com/s/3i48QqMh",
+      "us": "https://eyun.baidu.com/s/3eSwv1DK"
+    },
+    "tag": "gb_dzt"
+  }
+]

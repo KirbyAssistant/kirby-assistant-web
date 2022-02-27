@@ -1,0 +1,17 @@
+[
+  {
+    "title": "星之卡比 梦之泉物语",
+    "image": "https://api.imyan.ren/ka/image/game/mengzhiquan.png",
+    "tag": "fc_mzq"
+  },
+  {
+    "title": "星之卡比 梦之泉DX",
+    "image": "https://api.imyan.ren/ka/image/game/mengzhiquandx.png",
+    "tag": "gba_mzqdx"
+  },
+  {
+    "title": "星之卡比 镜之大迷宫",
+    "image": "https://api.imyan.ren/ka/image/game/jingmi.png",
+    "tag": "gba_jm"
+  }
+]

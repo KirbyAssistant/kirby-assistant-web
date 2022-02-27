@@ -1,0 +1,22 @@
+[
+  {
+    "title": "星之卡比 重返梦幻岛",
+    "image": "https://api.imyan.ren/ka/image/game/chongfan.jpg",
+    "download_link": {
+      "jp": "https://eyun.baidu.com/s/3skEbla1",
+      "us": "https://eyun.baidu.com/s/3gf5Oxe7",
+      "cn": "https://eyun.baidu.com/s/3gfqpuin"
+    },
+    "tag": "wii_cf"
+  },
+  {
+    "title": "星之卡比 毛线卡比",
+    "image": "https://api.imyan.ren/ka/image/game/maoxian.jpg",
+    "download_link": {
+      "jp": "https://eyun.baidu.com/s/3i5UCDpz",
+      "us": "https://eyun.baidu.com/s/3dFACfWd",
+      "cn": "https://eyun.baidu.com/s/3eRYayD8"
+    },
+    "tag": "wii_mx"
+  }
+]
