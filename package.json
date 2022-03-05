@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@types/node": "^17.0.21",
+    "mitt": "^3.0.0",
     "naive-ui": "^2.25.3",
     "qs": "^6.10.3",
     "vfonts": "^0.0.3",
@@ -25,6 +26,7 @@
     "@types/qs": "^6.9.7",
     "@typescript-eslint/eslint-plugin": "^5.12.1",
     "@typescript-eslint/parser": "^5.12.1",
+    "@vicons/ionicons5": "^0.12.0",
     "@vitejs/plugin-vue": "^2.2.0",
     "@vue/cli-shared-utils": "^5.0.1",
     "axios": "^0.26.0",

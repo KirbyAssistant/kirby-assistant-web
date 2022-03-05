@@ -1,44 +1,17 @@
 [
   {
-    "type": "GBA",
-    "title": "My Boy!",
-    "image": "https://api.imyan.ren/ka/image/emulator/emulator_gba.png",
-    "tag": "emulator_gba"
+    "type": "phone",
+    "title": "在安卓手机使用",
+    "link": "https://wwe.lanzouo.com/b01uucqgb"
   },
   {
-    "type": "SFC",
-    "title": "Snes9x EX+",
-    "image": "https://api.imyan.ren/ka/image/emulator/emulator_sfc.png",
-    "tag": "emulator_sfc"
+    "type": "windows",
+    "title": "在 Windows 电脑使用",
+    "link": "https://wwe.lanzouo.com/b01uucqid"
   },
   {
-    "type": "N64",
-    "title": "Tendo64",
-    "image": "https://api.imyan.ren/ka/image/emulator/emulator_n64.png",
-    "tag": "emulator_n64"
-  },
-  {
-    "type": "NDS",
-    "title": "DraStic",
-    "image": "https://api.imyan.ren/ka/image/emulator/emulator_nds.png",
-    "tag": "emulator_nds"
-  },
-  {
-    "type": "NGC&WII",
-    "title": "Dolphin",
-    "image": "https://api.imyan.ren/ka/image/emulator/emulator_wii.png",
-    "tag": "emulator_wii"
-  },
-  {
-    "type": "GB&GBC",
-    "title": "My OldBoy!",
-    "image": "https://api.imyan.ren/ka/image/emulator/emulator_gb_gbc.png",
-    "tag": "emulator_gb"
-  },
-  {
-    "type": "FC",
-    "title": "NES.emu",
-    "image": "https://api.imyan.ren/ka/image/emulator/emulator_fc.png",
-    "tag": "emulator_fc"
+    "type": "password",
+    "title": "提取密码为 kirby",
+    "link": ""
   }
 ]
