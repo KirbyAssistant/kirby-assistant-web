@@ -50,7 +50,7 @@
         position="absolute"
         style="height: 64px; padding: 24px"
       >
-        城府路
+        Copyright © 2022 <a href="https://imyan.ren">炎忍</a>
       </n-layout-footer>
     </n-layout>
   </div>
@@ -151,5 +151,9 @@ export default defineComponent({
   #title_div {
     justify-content: space-between;
   }
+}
+a {
+  color: inherit;
+  text-decoration: underline wavy;
 }
 </style>
