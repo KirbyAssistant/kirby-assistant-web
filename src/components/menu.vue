@@ -75,7 +75,6 @@ function getEmuMenu(): Promise<MenuOption[]> {
 
 watch(currItem, (val) => {
   global.menuItem = val
-  emitter.emit('closeMenu', true)
   emitter.emit('menuItem', val)
 })
 

@@ -1,3 +1,62 @@
+<script lang="ts" setup>
+import { onMounted, ref } from 'vue'
+import {
+  NLayout,
+  NLayoutHeader,
+  NLayoutSider,
+  NLayoutFooter,
+  NTag,
+  NIcon,
+  NPopover,
+  NScrollbar,
+} from 'naive-ui'
+import Menu from '@/components/menu.vue'
+import GameCard from '@/components/game-card.vue'
+import emitter from '@/utils/emitter'
+import { Api } from '@/utils/net'
+import { GameResponse } from '@/types/game-response'
+import { Menu as MenuIcon } from '@vicons/ionicons5'
+
+let gameListData = ref(Array<GameResponse>())
+let hide = ref(false)
+let liteMenu = ref(false)
+
+let pop = ref<any>(null)
+
+emitter.on('menuItem', async (val) => {
+  gameListData.value = await getGameData(val)
+})
+
+async function getGameData(type: string) {
+  return Api.getGameData(type)
+}
+
+onMounted(() => {
+  size()
+  window.onresize = () => {
+    size()
+  }
+  document.onclick = (e) => {
+    if (e!.target != document.getElementById('bar-menu')) {
+      liteMenu.value = false
+      console.log('hide')
+    }
+  }
+})
+
+function size() {
+  if (document.body.clientWidth < 768) {
+    emitter.emit('hideSidebar', true)
+  } else {
+    emitter.emit('hideSidebar', false)
+  }
+}
+
+emitter.on('hideSidebar', (val) => {
+  hide.value = val
+})
+</script>
+
 <template>
   <div style="height: 100vh; position: relative">
     <n-layout position="absolute">
@@ -6,15 +65,18 @@
           <n-tag id="title" checkable>Kirby Assistant</n-tag>
           <n-popover
             v-if="hide"
+            ref="pop"
             placement="bottom"
             trigger="click"
-            :width="240"
             :show="liteMenu"
+            :width="240"
           >
             <template #trigger>
-              <n-icon size="1rem" @click="liteMenu = !liteMenu">
-                <menu-icon />
-              </n-icon>
+              <i
+                id="bar-menu"
+                class="fa-solid fa-bars"
+                @click="liteMenu = !liteMenu"
+              ></i>
             </template>
             <n-scrollbar style="max-height: 60vh">
               <Menu />
@@ -34,7 +96,7 @@
           <Menu />
         </n-layout-sider>
         <n-layout bordered content-style="padding: 24px;">
-          <div style="display: flex; flex-direction: row; flex-wrap: wrap">
+          <div id="games">
             <game-card
               v-for="(item, index) in gameListData"
               :key="index"
@@ -56,100 +118,29 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, onMounted, ref, watch } from 'vue'
-import {
-  NLayout,
-  NLayoutHeader,
-  NLayoutContent,
-  NLayoutSider,
-  NLayoutFooter,
-  NTag,
-  NIcon,
-  NPopover,
-  NScrollbar,
-} from 'naive-ui'
-import Menu from '@/components/menu.vue'
-import GameCard from '@/components/game-card.vue'
-import emitter from '@/utils/emitter'
-import { Api } from '@/utils/net'
-import { GameResponse } from '@/types/game-response'
-import { Menu as MenuIcon } from '@vicons/ionicons5'
-import global from '@/global'
-
-export default defineComponent({
-  components: {
-    NLayout,
-    NLayoutHeader,
-    NLayoutContent,
-    NLayoutSider,
-    NLayoutFooter,
-    Menu,
-    GameCard,
-    NTag,
-    NIcon,
-    MenuIcon,
-    NPopover,
-    NScrollbar,
-  },
-  setup() {
-    let gameListData = ref(Array<GameResponse>())
-    let hide = ref(false)
-    let liteMenu = ref(false)
-
-    emitter.on('menuItem', async (val) => {
-      gameListData.value = await getGameData(val)
-    })
-
-    emitter.on('closeMenu', (val) => {
-      liteMenu.value = false
-    })
-
-    async function getGameData(type: string) {
-      return Api.getGameData(type)
-    }
-
-    onMounted(() => {
-      size()
-      window.onresize = () => {
-        size()
-      }
-    })
-
-    function size() {
-      if (document.body.clientWidth < 768) {
-        emitter.emit('hideSidebar', true)
-      } else {
-        emitter.emit('hideSidebar', false)
-      }
-    }
-
-    emitter.on('hideSidebar', (val) => {
-      hide.value = val
-    })
-
-    return {
-      gameListData,
-      hide,
-      liteMenu,
-    }
-  },
-})
-</script>
-
 <style scoped>
 #title {
   font-size: 2rem;
   font-weight: bold;
 }
+
 #title_div {
   display: flex;
   justify-content: center;
 }
 
+#games {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 @media screen and (max-width: 768px) {
   #title_div {
     justify-content: space-between;
+  }
+  #games {
+    justify-content: center;
   }
 }
 a {

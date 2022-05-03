@@ -5,7 +5,7 @@ import { NCard, NImage, NModal, NButton, NSpace } from 'naive-ui'
 defineProps({
   title: String,
   imageUrl: String,
-  downloadLink: Map,
+  downloadLink: Object,
 })
 
 let showDownload = ref(false)
