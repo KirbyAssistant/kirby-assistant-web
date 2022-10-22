@@ -3,15 +3,33 @@ env:
   es2021: true
   node: true
 extends:
-  - plugin:vue/essential
-  - airbnb-base
+  - eslint:recommended
+  - plugin:@typescript-eslint/recommended
   - prettier
+  - ./.eslintrc-auto-import.json
 parserOptions:
   ecmaVersion: latest
-  parser: '@typescript-eslint/parser'
+  parser: "@typescript-eslint/parser"
   sourceType: module
 plugins:
-  - vue
-  - '@typescript-eslint'
-  - 'plugin:prettier/recommended'
-rules: {}
+  - prettier
+  - "@typescript-eslint"
+rules:
+  indent:
+    - error
+    - 2
+    - SwitchCase: 1
+  linebreak-style:
+    - error
+    - unix
+  quotes:
+    - error
+    - single
+  semi:
+    - error
+    - never
+  prettier/prettier:
+    - error
+  "@typescript-eslint/no-explicit-any": 0
+globals:
+  defineProps: "readonly"

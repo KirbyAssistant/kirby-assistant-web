@@ -1,23 +1,34 @@
-# Vue Template
-
-![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=for-the-badge&logo=Visual+Studio+Code)
-![Yarn](https://img.shields.io/badge/Yarn-282c34?style=for-the-badge&logo=yarn)
-![Vue](https://img.shields.io/badge/Vue-007396?style=for-the-badge&logo=Vue.js)
-![TypeScript](https://img.shields.io/badge/TypeScript-81ecec?style=for-the-badge&logo=TypeScript)
-![Prettier](https://img.shields.io/badge/Prettier-fd79a8?style=for-the-badge&logo=Prettier)
-
-## Recommended IDE Setup
-
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
-
-## Other needs
-
-- Package Manager: [Yarn](https://yarnpkg.com/)
-
 ## Usage
 
-use `yarn` to install dependencies.
+Those templates dependencies are maintained via [pnpm](https://pnpm.io) via `pnpm up -Lri`.
 
-use `yarn dev` to run the development server.
+This is the reason you see a `pnpm-lock.yaml`. That being said, any package manager will work. This file can be safely be removed once you clone a template.
 
-use `yarn build` to build the production version.
+```bash
+$ npm install # or pnpm install or yarn install
+```
+
+### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm dev` or `npm start`
+
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br>
+
+### `npm run build`
+
+Builds the app for production to the `dist` folder.<br>
+It correctly bundles Solid in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.<br>
+Your app is ready to be deployed!
+
+## Deployment
+
+You can deploy the `dist` folder to any static host provider (netlify, surge, now, etc.)
