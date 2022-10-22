@@ -146,7 +146,7 @@ const EmulatorCard = () => {
     link: string
   }
 
-  const [hide, setHide] = createSignal(false)
+  const [hide, setHide] = createSignal(true)
   const [emuData, setEmuData] = createSignal<Array<Emulator>>([])
 
   createEffect(async () => {
