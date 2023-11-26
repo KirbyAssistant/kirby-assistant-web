@@ -3,15 +3,16 @@ import './App.less'
 import EmulatorCard from './components/emulator-card/emulator-card'
 import PlatformList from './components/platform-list/platform-list'
 import GameList from './components/game-list/game-list'
+import { PlatformProvider } from './platform'
 
 const App: Component = () => {
-  const [platform, setPlatform] = createSignal('')
-
   return (
     <>
       <p class="header">Kirby Assistant</p>
-      <PlatformList onPlatformChange={setPlatform} />
-      <GameList platform={platform()} />
+      <PlatformProvider>
+        <PlatformList />
+        <GameList />
+      </PlatformProvider>
       <EmulatorCard />
       <footer>
         <p>

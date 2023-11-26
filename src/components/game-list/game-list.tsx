@@ -1,16 +1,13 @@
 import { get } from '@/net'
 import { Component, For, createEffect, createResource } from 'solid-js'
 import './index.less'
+import { usePlatform } from '@/platform'
 
 interface Game {
   title: string
   image: string
   tag: string
   download_link: any
-}
-
-interface Props {
-  platform: string
 }
 
 const GameCard: Component<Game> = (game) => {
@@ -48,14 +45,15 @@ const GameCard: Component<Game> = (game) => {
   )
 }
 
-const GameList: Component<Props> = (props) => {
+const GameList: Component = () => {
+  const { platform } = usePlatform()
   const [gameList, { refetch }] = createResource(() =>
-    get<Array<Game>>(`/data/console/${props.platform}.json`),
+    get<Array<Game>>(`/data/console/${platform()}.json`),
   )
 
   createEffect(() => {
-    if (props.platform) {
-      console.log(props.platform)
+    if (platform()) {
+      console.log(platform())
 
       refetch()
     }

@@ -7,26 +7,24 @@ import {
   createSignal,
 } from 'solid-js'
 import './index.less'
+import { usePlatform } from '@/platform'
 
 interface Platform {
   title: string
   tag: string
 }
 
-interface Props {
-  onPlatformChange: (platform: string) => void
-}
-
-const PlatformList: Component<Props> = (props) => {
+const PlatformList: Component = () => {
   const [platformsData] = createResource(() =>
     get<Array<Platform>>('/data/console.json'),
   )
   const [selectedIndex, setSelectedIndex] = createSignal(0)
+  const { setPlatform } = usePlatform()
 
   createEffect(() => {
     const first = platformsData()?.at(0)
     if (first) {
-      props.onPlatformChange(first.tag)
+      setPlatform(first.tag)
     }
   })
 
@@ -40,7 +38,7 @@ const PlatformList: Component<Props> = (props) => {
               classList={{ select: index() === selectedIndex() }}
               onClick={() => {
                 setSelectedIndex(index())
-                props.onPlatformChange(platform.tag)
+                setPlatform(platform.tag)
               }}
             >
               {platform.title}
