@@ -1,7 +1,7 @@
 [
   {
     "title": "星之卡比 3",
-    "image": "https://api.imyan.ren/ka/image/game/xing3.jpg",
+    "image": "https://staitc-gh.imyan.ren/ka/image/game/xing3.jpg",
     "download_link": {
       "jp": "https://eyun.baidu.com/s/3pKTD8EZ",
       "us": "https://eyun.baidu.com/s/3gfwui2n"
@@ -10,7 +10,7 @@
   },
   {
     "title": "星之卡比 超豪华版",
-    "image": "https://api.imyan.ren/ka/image/game/kss.jpg",
+    "image": "https://staitc-gh.imyan.ren/ka/image/game/kss.jpg",
     "download_link": {
       "jp": "https://eyun.baidu.com/s/3qXEc4Xm",
       "us": "https://eyun.baidu.com/s/3nu8IV"
@@ -19,7 +19,7 @@
   },
   {
     "title": "星之卡比 卡比梦幻都",
-    "image": "https://api.imyan.ren/ka/image/game/menghuandu.jpg",
+    "image": "https://staitc-gh.imyan.ren/ka/image/game/menghuandu.jpg",
     "download_link": {
       "jp": "https://eyun.baidu.com/s/3hsvCjfI",
       "us": "https://eyun.baidu.com/s/3jHCmNps"
@@ -28,7 +28,7 @@
   },
   {
     "title": "星之卡比 玩具箱合集",
-    "image": "https://api.imyan.ren/ka/image/game/toybox.jpg",
+    "image": "https://staitc-gh.imyan.ren/ka/image/game/toybox.jpg",
     "download_link": {
       "jp": "https://eyun.baidu.com/s/3qZr1yry"
     },
@@ -36,7 +36,7 @@
   },
   {
     "title": "星之卡比 卡比魔方气泡",
-    "image": "https://api.imyan.ren/ka/image/game/mofangqipao.jpg",
+    "image": "https://staitc-gh.imyan.ren/ka/image/game/mofangqipao.jpg",
     "download_link": {
       "us": "https://eyun.baidu.com/s/3eSuusSi"
     },
@@ -44,7 +44,7 @@
   },
   {
     "title": "星之卡比 卡比宝石星DX",
-    "image": "https://api.imyan.ren/ka/image/game/baoshixingdx.jpg",
+    "image": "https://staitc-gh.imyan.ren/ka/image/game/baoshixingdx.jpg",
     "download_link": {
       "jp": "https://eyun.baidu.com/s/3kVDhaS3"
     },

@@ -8,17 +8,19 @@ import { PlatformProvider } from './platform'
 const App: Component = () => {
   return (
     <>
-      <p class="header">Kirby Assistant</p>
-      <PlatformProvider>
-        <PlatformList />
-        <GameList />
-      </PlatformProvider>
-      <EmulatorCard />
-      <footer>
-        <p>
-          ©2017-2023 <span>炎忍</span>
-        </p>
-      </footer>
+      <div class="app">
+        <p class="header">Kirby Assistant</p>
+        <PlatformProvider>
+          <PlatformList />
+          <GameList />
+        </PlatformProvider>
+        <EmulatorCard />
+        <footer>
+          <p>
+            ©2017-2023 <span>炎忍</span>
+          </p>
+        </footer>
+      </div>
     </>
   )
 }

@@ -1,23 +1,11 @@
-import { get } from '@/net'
-import {
-  Component,
-  For,
-  createEffect,
-  createResource,
-  createSignal,
-} from 'solid-js'
+import { Component, For, createEffect, createSignal } from 'solid-js'
 import './index.less'
 import { usePlatform } from '@/platform'
-
-interface Platform {
-  title: string
-  tag: string
-}
+import { platformList } from '@/api'
 
 const PlatformList: Component = () => {
-  const [platformsData] = createResource(() =>
-    get<Array<Platform>>('/data/console.json'),
-  )
+  const [platformsData] = platformList()
+
   const [selectedIndex, setSelectedIndex] = createSignal(0)
   const { setPlatform } = usePlatform()
 

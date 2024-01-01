@@ -1,14 +1,7 @@
-import { get } from '@/net'
 import { Component, For, createEffect, createResource } from 'solid-js'
 import './index.less'
 import { usePlatform } from '@/platform'
-
-interface Game {
-  title: string
-  image: string
-  tag: string
-  download_link: any
-}
+import { gameList } from '@/api'
 
 const GameCard: Component<Game> = (game) => {
   const versionNameMap = new Map([
@@ -47,26 +40,20 @@ const GameCard: Component<Game> = (game) => {
 
 const GameList: Component = () => {
   const { platform } = usePlatform()
-  const [gameList, { refetch }] = createResource(() =>
-    get<Array<Game>>(`/data/console/${platform()}.json`),
-  )
+  const [gameListData, { refetch }] = gameList(platform)
 
   createEffect(() => {
     if (platform()) {
       console.log(platform())
 
-      refetch()
+      refetch(platform)
     }
-  })
-
-  createEffect(() => {
-    console.log(gameList())
   })
 
   return (
     <>
       <div class="game-list">
-        <For each={gameList()}>
+        <For each={gameListData()}>
           {(game) => (
             <GameCard
               title={game.title}

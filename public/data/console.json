@@ -1,47 +1,47 @@
 [
   {
     "title": "GBA",
-    "image": "https://api.imyan.ren/ka/image/console/gba.png",
+    "image": "https://staitc-gh.imyan.ren/ka/image/console/gba.png",
     "tag": "gba"
   },
   {
     "title": "SFC",
-    "image": "https://api.imyan.ren/ka/image/console/sfc.png",
+    "image": "https://staitc-gh.imyan.ren/ka/image/console/sfc.png",
     "tag": "sfc"
   },
   {
     "title": "N64",
-    "image": "https://api.imyan.ren/ka/image/console/n64.png",
+    "image": "https://staitc-gh.imyan.ren/ka/image/console/n64.png",
     "tag": "n64"
   },
   {
     "title": "NGC",
-    "image": "https://api.imyan.ren/ka/image/console/ngc.png",
+    "image": "https://staitc-gh.imyan.ren/ka/image/console/ngc.png",
     "tag": "ngc"
   },
   {
     "title": "WII",
-    "image": "https://api.imyan.ren/ka/image/console/wii.png",
+    "image": "https://staitc-gh.imyan.ren/ka/image/console/wii.png",
     "tag": "wii"
   },
   {
     "title": "NDS",
-    "image": "https://api.imyan.ren/ka/image/console/nds.png",
+    "image": "https://staitc-gh.imyan.ren/ka/image/console/nds.png",
     "tag": "nds"
   },
   {
     "title": "GB",
-    "image": "https://api.imyan.ren/ka/image/console/gb.png",
+    "image": "https://staitc-gh.imyan.ren/ka/image/console/gb.png",
     "tag": "gb"
   },
   {
     "title": "GBC",
-    "image": "https://api.imyan.ren/ka/image/console/gbc.png",
+    "image": "https://staitc-gh.imyan.ren/ka/image/console/gbc.png",
     "tag": "gbc"
   },
   {
     "title": "FC",
-    "image": "https://api.imyan.ren/ka/image/console/fc.png",
+    "image": "https://staitc-gh.imyan.ren/ka/image/console/fc.png",
     "tag": "fc"
   }
 ]
